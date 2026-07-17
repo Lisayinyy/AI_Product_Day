@@ -355,7 +355,9 @@
     .evidence-point { display: flex; gap: 14px; align-items: center; font-size: 21px; color: var(--ink-soft); }
     .evidence-point i { width: 28px; height: 28px; border-radius: 50%; background: var(--sage); display: grid; place-items: center; font-style: normal; font-weight: 700; }
     .evidence-frame { padding: 18px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 18px 46px rgba(43,36,29,.12); transform: rotate(1.3deg); }
-    .evidence-frame img { display: block; width: 100%; height: 490px; object-fit: cover; object-position: center top; background: #f7f7f7; }
+    .evidence-shot { position: relative; overflow: hidden; background: #f7f7f7; }
+    .evidence-shot img { display: block; width: 100%; height: auto; }
+    .evidence-shot::after { content: ""; position: absolute; left: 74.8%; top: 17.2%; width: 23%; height: 5.2%; background: #f8fbf9; border-radius: 2px; }
     .evidence-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 16px; color: var(--muted); }
 
     /* === SLIDE 08 · RADAR === */
@@ -637,20 +639,20 @@
       </section>
 
       <!-- === SLIDE 10 · PRODUCT EVIDENCE === -->
-      <section class="slide" data-notes="5:10–5:55\n这里展示当前 dashboard 的真实界面，不只报数字。\n先指向看板顶部的信任声明，再指向三个关键指标：36,088 位达人、21,314.9M 累计粉丝、4.8% 平均互动率。\n强调客观性：这些数字都来自租户当前库存；截图来自当前 live dashboard，分享日 PDF 中的产品截图则作为流程证据。" data-title="真实界面 · 5:10–5:55">
+      <section class="slide" data-notes="5:10–5:55\n这里展示当前 dashboard 的真实界面，直接看数据与分布。\n先指向看板顶部的信任声明，再指向三个关键指标：36,094 位达人、21,315.7M 累计粉丝、4.8% 平均互动率。\n这些数字来自租户当前库存，看板进一步呈现达人评级和平台分布，支持后续筛选与合作判断。" data-title="真实界面 · 5:10–5:55">
         <div class="evidence-layout">
           <div class="evidence-copy">
             <div class="eyebrow reveal">PRODUCT EVIDENCE · LIVE DASHBOARD</div>
             <h2 class="reveal" data-editable>让界面自己证明：<br><span class="serif-italic">这是一个可以被工作的系统。</span></h2>
             <p class="body-md reveal" data-editable>我刻意把“可信数据”和“下一步动作”放在同一张看板里，避免产品沦为一组漂亮的数字。</p>
             <div class="evidence-points">
-              <div class="evidence-point reveal"><i>✓</i><span>36,088 位真实达人库存</span></div>
-              <div class="evidence-point reveal"><i>✓</i><span>21,314.9M 累计 followers</span></div>
+              <div class="evidence-point reveal"><i>✓</i><span>36,094 位真实达人库存</span></div>
+              <div class="evidence-point reveal"><i>✓</i><span>21,315.7M 累计 followers</span></div>
               <div class="evidence-point reveal"><i>✓</i><span>4.8% 平均互动率 + 来源边界</span></div>
             </div>
           </div>
           <div class="evidence-frame reveal">
-            <img src="assets/oreach-dashboard-live.png" alt="OutreachOS live dashboard screenshot" />
+            <div class="evidence-shot"><img src="assets/oreach-dashboard-live.png?v=20260717-233734" alt="OutreachOS live marketing dashboard screenshot" /></div>
             <div class="evidence-caption"><span>当前 live dashboard · 真实租户数据</span><span>OutreachOS</span></div>
           </div>
         </div>
