@@ -264,13 +264,21 @@
     /* === SLIDE 04 · PRODUCT SECTION === */
     .section-card { position: absolute; left: 120px; top: 96px; width: 1680px; height: 888px; padding: 94px 104px; overflow: hidden; }
     .section-card .section-num { font: 600 26px var(--body); color: var(--terracotta); letter-spacing: .12em; }
-    .section-card h2 { margin-top: 74px; max-width: 1080px; }
-    .section-card .body-lg { margin-top: 34px; max-width: 790px; }
+    .section-card h2 { margin-top: 74px; max-width: 970px; }
+    .section-card .body-lg { margin-top: 34px; max-width: 900px; }
     .section-underline { width: 290px; height: 5px; background: var(--terracotta); margin-top: 52px; }
-    .section-stamp { position: absolute; right: 156px; top: 210px; width: 350px; height: 350px; border-radius: 50%; border: 1px solid rgba(192,96,60,.45); display: grid; place-items: center; transform: rotate(9deg); }
-    .section-stamp::before { content: ""; position: absolute; inset: 20px; border-radius: 50%; border: 1px dashed rgba(192,96,60,.45); }
-    .section-stamp strong { font: 600 66px var(--display); color: var(--terracotta); }
-    .section-stamp small { position: absolute; bottom: 69px; font-size: 18px; color: var(--muted); }
+    .section-network { position: absolute; right: 84px; top: 150px; width: 520px; height: 590px; display: grid; grid-template-rows: 128px 244px 128px; gap: 28px; justify-items: center; align-items: center; }
+    .section-network::before { content: ""; position: absolute; left: 50%; top: 92px; bottom: 92px; width: 2px; transform: translateX(-50%); background: linear-gradient(180deg, rgba(192,96,60,.2), rgba(192,96,60,.72) 48%, rgba(192,96,60,.2)); }
+    .platform-node { position: relative; z-index: 2; width: 390px; min-height: 128px; padding: 23px 30px; background: rgba(255,253,248,.94); border: 1px solid var(--line); box-shadow: 0 12px 28px rgba(43,36,29,.06); text-align: center; }
+    .platform-node .node-side { display: block; font: 600 14px var(--body); letter-spacing: .15em; color: var(--terracotta); text-transform: uppercase; }
+    .platform-node strong { display: block; margin-top: 8px; font: 600 30px/1.05 var(--display); color: var(--ink); }
+    .platform-node small { display: block; margin-top: 8px; font-size: 16px; color: var(--muted); }
+    .platform-node.freelancer .node-side { color: #6d5b9c; }
+    .platform-hub { position: relative; z-index: 3; width: 244px; height: 244px; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--ink); color: var(--paper); box-shadow: 0 20px 52px rgba(43,36,29,.18); }
+    .platform-hub::before { content: ""; position: absolute; inset: -16px; border-radius: 50%; border: 1px dashed rgba(192,96,60,.58); }
+    .platform-hub span { font: 600 14px var(--body); letter-spacing: .18em; color: #d99a7e; }
+    .platform-hub strong { margin-top: 12px; font: 600 34px/1 var(--display); }
+    .platform-hub small { margin-top: 12px; font-size: 16px; color: rgba(255,253,248,.7); }
 
     /* === SLIDE 05 · WHY NOW === */
     .why-card { position: absolute; left: 120px; top: 112px; width: 1680px; height: 832px; padding: 70px 88px; }
@@ -564,13 +572,17 @@
       </section>
 
       <!-- === SLIDE 04 · PRODUCT SECTION === -->
-      <section class="slide" data-notes="2:00–2:20\n转场：下面进入产品部分。\n一句话定义：OutreachOS 是给 OPC 和 1–2 人小团队使用的 AI Creator Growth Workflow，把“找对人、发出信、完成合作、看清效果”放进一个工作系统。" data-title="产品 · 2:00–2:20">
+      <section class="slide" data-notes="2:00–2:20\n转场：下面进入产品部分。\n一句话定义：OutreachOS 是连接 OPC / 小团队与个人 Freelancer / 自由职业者的 AI Creator Growth Platform。\nOPC 和小团队在平台上发布需求、管理增长；个人 Freelancer 接单、推荐产品并按结果获得分佣；平台和数字员工协助双方完成匹配与执行。" data-title="产品 · 2:00–2:20">
         <div class="paper-card section-card">
           <div class="section-num reveal">02 · PRODUCT</div>
-          <h2 class="reveal" data-editable>把一个增长问题，<br>做成一套<span class="serif-italic">工作系统。</span></h2>
-          <p class="body-lg reveal" data-editable>OutreachOS：给 OPC 和 1–2 人小团队使用的 AI Creator Growth Workflow。</p>
+          <h2 class="reveal" data-editable>把增长的两端，<br>连接成一个<span class="serif-italic">平台。</span></h2>
+          <p class="body-lg reveal" data-editable>OutreachOS 连接 OPC / 小团队与个人 Freelancer / 自由职业者，让需求发布、创作者接单、协作执行和结果分佣在同一平台完成。</p>
           <div class="section-underline reveal"></div>
-          <div class="section-stamp reveal"><strong>OPC</strong><small>1–2 人小团队</small></div>
+          <div class="section-network reveal" aria-label="OutreachOS connects OPC and small teams with individual freelancers">
+            <div class="platform-node opc"><span class="node-side">需求侧</span><strong>OPC / 小团队</strong><small>发布需求 · 管理增长</small></div>
+            <div class="platform-hub"><span>PLATFORM</span><strong>OutreachOS</strong><small>匹配 · 协作 · 结算</small></div>
+            <div class="platform-node freelancer"><span class="node-side">创作者侧</span><strong>Freelancer / 自由职业者</strong><small>领取活动 · 推荐产品</small></div>
+          </div>
         </div>
         <div class="page-mark">04 / 15</div>
       </section>
