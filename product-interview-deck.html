@@ -370,11 +370,11 @@
     .radar-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 16px; color: var(--muted); }
 
     /* === SLIDE 09 · AI TEAM === */
-    .team-card { position: absolute; left: 120px; top: 128px; width: 1680px; height: 800px; padding: 72px 88px; }
+    .team-card { position: absolute; left: 120px; top: 112px; width: 1680px; height: 832px; padding: 60px 76px; }
     .team-card h2 { margin-top: 24px; }
-    .team-intro { margin-top: 20px; max-width: 820px; }
-    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
-    .agent { padding: 22px 22px 20px; border: 1px solid var(--line); background: var(--paper-warm); min-height: 170px; }
+    .team-intro { margin-top: 18px; max-width: 1180px; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+    .agent { padding: 22px 22px 20px; border: 1px solid var(--line); background: var(--paper-warm); min-height: 190px; }
     .agent .agent-top { display: flex; align-items: center; justify-content: space-between; }
     .agent .agent-name { font: 600 25px var(--body); }
     .agent .agent-icon { width: 35px; height: 35px; border-radius: 50%; display: grid; place-items: center; background: var(--terracotta); color: #fff; font-size: 18px; }
@@ -384,7 +384,8 @@
     .agent:nth-child(5) .agent-icon { background: var(--sky); color: var(--ink); }
     .agent:nth-child(6) .agent-icon { background: var(--cream); color: var(--ink); }
     .agent p { margin-top: 12px; font-size: 18px; line-height: 1.35; color: var(--muted); }
-    .human-loop { margin-top: 34px; display: flex; align-items: center; gap: 12px; font-size: 20px; color: var(--ink-soft); }
+    .agent .agent-output { display: inline-block; margin-top: 12px; padding: 5px 9px; border-radius: 999px; background: rgba(255,253,248,.88); border: 1px solid var(--line); font-size: 14px; color: var(--terracotta); }
+    .human-loop { margin-top: 26px; display: flex; align-items: center; gap: 12px; font-size: 20px; color: var(--ink-soft); }
     .human-loop .lock { width: 31px; height: 31px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 15px; }
     .employees-layout { position: absolute; left: 110px; right: 110px; top: 146px; display: grid; grid-template-columns: .76fr 1.24fr; gap: 58px; align-items: start; z-index: 2; }
     .employees-copy h2 { margin-top: 28px; max-width: 700px; }
@@ -553,7 +554,7 @@
       </section>
 
       <!-- === SLIDE 05 · DIGITAL EMPLOYEES EVIDENCE === -->
-      <section class="slide" data-notes="2:20–2:55\n产品介绍先从数字员工开始：OutreachOS 把增长工作拆成可协作的岗位。\n左侧讲产品判断：AI 被拆成岗位，围绕增长工作形成一支可协作的团队。\n右侧截图指向：Aria 赛道分析、Scout 达人搜寻、Mia 建联、Max 投放、Leo 跟进、Rin 效果分析；并强调所有对外动作 human-in-loop。" data-title="数字员工 · 2:20–2:55">
+      <section class="slide" data-notes="2:20–2:45\n产品介绍先从数字员工开始：OutreachOS 把增长工作拆成可协作的岗位。\n这一页先展示数字员工的真实工作区：六个角色共享私有工作区和同一条达人管道。\n下一页逐个讲每个员工负责什么。" data-title="数字员工总览 · 2:20–2:45">
         <div class="employees-layout">
           <div class="employees-copy">
             <div class="eyebrow reveal">EXECUTE · DIGITAL EMPLOYEES</div>
@@ -573,8 +574,27 @@
         <div class="page-mark">05 / 14</div>
       </section>
 
-      <!-- === SLIDE 06 · WHY NOW === -->
-      <section class="slide" data-notes="2:55–3:20\n这一页回答“为什么值得做”。\n先讲外部需求：TikTok Shop 交易和直播供给快速增长，Creator 广告预算进入规模化阶段。\n再讲产品证据：OutreachOS 当前公开快照已经覆盖 36K+ 达人记录、40 个市场。\n注意口径：1.7 亿是 TikTok 美国用户；37B 是 IAB 对美国 2025 年 Creator 广告支出的预测；$20B+ 是 eMarketer 公开新闻稿对美国 TikTok Shop 2026 年销售额的保守公开口径；36K+ 和 40 个市场是产品公开快照，不是 TAM。\n结论：交易增长 × 预算增长 × 执行缺口，构成产品窗口。\n来源：TikTok Newsroom https://newsroom.tiktok.com/en-us/year-on-tiktok-2024 · IAB https://www.iab.com/insights/2025-creator-economy-ad-spend-strategy-report/ · IAB PDF https://www.iab.com/wp-content/uploads/2025/11/IAB_Creator_Ad_Spend_and_Strategy_Report_2025.pdf · eMarketer https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025 · OutreachOS https://oreach.site/" data-title="为什么现在值得做 · 2:55–3:20">
+      <!-- === SLIDE 06 · DIGITAL EMPLOYEE ROLES === -->
+      <section class="slide" data-notes="2:45–3:25\n六个数字员工对应一条完整增长链路。\nAria 做赛道和地区判断；Scout 按条件扩充达人池；Mia 生成个性化建联草稿；Max 组织预算、创意和排期；Leo 监测状态并起草跟进动作；Rin 完成 GMV / ROI 归因与复盘。\n最后强调职责边界：所有对外内容先形成待审草稿，经人工确认后再发送。" data-title="数字员工分工 · 2:45–3:25">
+        <div class="paper-card team-card">
+          <div class="eyebrow reveal">DIGITAL EMPLOYEES · ROLE MAP</div>
+          <h2 class="reveal" data-editable>六个角色，覆盖一条<span class="serif-italic">完整增长链路。</span></h2>
+          <p class="body-md team-intro reveal" data-editable>每个员工都有清晰的职责与产出，共享私有工作区和同一条达人管道。</p>
+          <div class="team-grid">
+            <div class="agent reveal"><div class="agent-top"><div class="agent-name">Aria · 赛道分析员</div><div class="agent-icon">A</div></div><p>比较达人供给、内容热度和竞争集中度，找出值得优先进入的市场与赛道。</p><span class="agent-output">产出 · 赛道优先级</span></div>
+            <div class="agent reveal"><div class="agent-top"><div class="agent-name">Scout · 达人搜寻员</div><div class="agent-icon">S</div></div><p>按国家、品类、平台、粉丝量和评级扩充候选池，沉淀可建联名单。</p><span class="agent-output">产出 · 达人候选池</span></div>
+            <div class="agent reveal"><div class="agent-top"><div class="agent-name">Mia · 建联专员</div><div class="agent-icon">Mi</div></div><p>结合品牌目标、达人内容风格和所在地语言，生成个性化建联草稿。</p><span class="agent-output">产出 · 待审建联信</span></div>
+            <div class="agent reveal"><div class="agent-top"><div class="agent-name">Max · 投放操盘手</div><div class="agent-icon">Mx</div></div><p>把一句需求拆成预算分配、创意方向、达人组合和执行排期。</p><span class="agent-output">产出 · 投放方案</span></div>
+            <div class="agent reveal"><div class="agent-top"><div class="agent-name">Leo · 跟进专员</div><div class="agent-icon">L</div></div><p>监测建联状态、超时和异议节点，结合历史记录起草催回与谈判话术。</p><span class="agent-output">产出 · 待审跟进动作</span></div>
+            <div class="agent reveal"><div class="agent-top"><div class="agent-name">Rin · 效果分析师</div><div class="agent-icon">R</div></div><p>归因 GMV、ROI 和互动结果，识别有效组合，给出下一轮优化建议。</p><span class="agent-output">产出 · 复盘与优化建议</span></div>
+          </div>
+          <div class="human-loop reveal"><span class="lock">✓</span><span>Human-in-loop：对外内容先生成待审草稿，人工确认后再发送。</span></div>
+        </div>
+        <div class="page-mark">06 / 14</div>
+      </section>
+
+      <!-- === SLIDE 07 · WHY NOW === -->
+      <section class="slide" data-notes="3:25–3:50\n这一页回答“为什么值得做”。\n先讲外部需求：TikTok Shop 交易和直播供给快速增长，Creator 广告预算进入规模化阶段。\n再讲产品证据：OutreachOS 当前公开快照已经覆盖 36K+ 达人记录、40 个市场。\n注意口径：1.7 亿是 TikTok 美国用户；37B 是 IAB 对美国 2025 年 Creator 广告支出的预测；$20B+ 是 eMarketer 公开新闻稿对美国 TikTok Shop 2026 年销售额的保守公开口径；36K+ 和 40 个市场是产品公开快照，不是 TAM。\n结论：交易增长 × 预算增长 × 执行缺口，构成产品窗口。\n来源：TikTok Newsroom https://newsroom.tiktok.com/en-us/year-on-tiktok-2024 · IAB https://www.iab.com/insights/2025-creator-economy-ad-spend-strategy-report/ · IAB PDF https://www.iab.com/wp-content/uploads/2025/11/IAB_Creator_Ad_Spend_and_Strategy_Report_2025.pdf · eMarketer https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025 · OutreachOS https://oreach.site/" data-title="为什么现在值得做 · 3:25–3:50">
         <div class="paper-card why-card">
           <div class="eyebrow reveal">WHY NOW · MARKET SIGNALS</div>
           <h2 class="reveal" data-editable>交易在增长，<br><span class="serif-italic">执行缺口也在增长。</span></h2>
@@ -587,11 +607,11 @@
           </div>
           <div class="why-conclusion reveal" data-editable>交易增长 × 预算增长 × 执行缺口 = 产品窗口</div>
         </div>
-        <div class="page-mark">06 / 14</div>
+        <div class="page-mark">07 / 14</div>
       </section>
 
-      <!-- === SLIDE 07 · COMPETITOR LANDSCAPE === -->
-      <section class="slide" data-notes="3:20–3:45\n这一页按目标用户比较竞品。\nTikTok Shop Affiliate 强在平台内成交；Impact.com 面向成熟的 partnership / affiliate program；GRIN、Aspire、Upfluence、Modash 面向有预算和专职团队的品牌；搜索+表格+邮箱仍是 OPC 的现实替代方案。\nOutreachOS 的切入点：OPC 和 1–2 人跨境团队，强调快速上手、跨平台上下文、来源透明、人工审核和低门槛执行。\n竞品来源：TikTok Shop Affiliate https://business.tiktokshop.com/uk/affiliate · Impact.com https://impact.com/ · GRIN https://grin.co/pricing/ · Aspire https://www.aspire.io/ · Upfluence https://www.upfluence.com/pricing · Modash https://www.modash.io/pricing/" data-title="竞品格局 · 3:20–3:45">
+      <!-- === SLIDE 08 · COMPETITOR LANDSCAPE === -->
+      <section class="slide" data-notes="3:50–4:15\n这一页按目标用户比较竞品。\nTikTok Shop Affiliate 强在平台内成交；Impact.com 面向成熟的 partnership / affiliate program；GRIN、Aspire、Upfluence、Modash 面向有预算和专职团队的品牌；搜索+表格+邮箱仍是 OPC 的现实替代方案。\nOutreachOS 的切入点：OPC 和 1–2 人跨境团队，强调快速上手、跨平台上下文、来源透明、人工审核和低门槛执行。\n竞品来源：TikTok Shop Affiliate https://business.tiktokshop.com/uk/affiliate · Impact.com https://impact.com/ · GRIN https://grin.co/pricing/ · Aspire https://www.aspire.io/ · Upfluence https://www.upfluence.com/pricing · Modash https://www.modash.io/pricing/" data-title="竞品格局 · 3:50–4:15">
         <div class="paper-card competitor-card">
           <div class="eyebrow reveal">COMPETITOR LANDSCAPE</div>
           <h2 class="reveal" data-editable>成熟平台服务成熟团队，<br><span class="serif-italic">OPC 需要更轻的执行层。</span></h2>
@@ -604,11 +624,11 @@
           </div>
           <div class="wedge reveal"><strong>OutreachOS · OPC first</strong><span>1–2 人即可运行：跨源发现 → 可解释判断 → AI 起草 → 人工审核 → Affiliate 结果回链。</span></div>
         </div>
-        <div class="page-mark">07 / 14</div>
+        <div class="page-mark">08 / 14</div>
       </section>
 
-      <!-- === SLIDE 08 · PROBLEM === -->
-      <section class="slide" data-notes="3:45–4:20\n先讲用户，再讲功能。\n目标用户是跨境中小卖家：他们有达人营销的意愿，当前需要一套可信、可执行、可复盘的工作流。\n三个痛点：市场和品类机会不透明；达人数据真假难辨且分散；建联与跟进靠表格和人肉。" data-title="用户与问题 · 3:45–4:20">
+      <!-- === SLIDE 09 · PROBLEM === -->
+      <section class="slide" data-notes="4:15–4:50\n先讲用户，再讲功能。\n目标用户是跨境中小卖家：他们有达人营销的意愿，当前需要一套可信、可执行、可复盘的工作流。\n三个痛点：市场和品类机会不透明；达人数据真假难辨且分散；建联与跟进靠表格和人肉。" data-title="用户与问题 · 4:15–4:50">
         <div class="problem-layout">
           <div class="eyebrow reveal">THE USER PROBLEM</div>
           <h2 class="reveal" data-editable>出海团队想增长，<br><span class="serif-italic">但每一步都在失真。</span></h2>
@@ -620,11 +640,11 @@
           </div>
           <div class="problem-foot reveal">所以产品的第一原则是：让每个动作都有上下文。</div>
         </div>
-        <div class="page-mark">08 / 14</div>
+        <div class="page-mark">09 / 14</div>
       </section>
 
-      <!-- === SLIDE 09 · PRODUCT MAP === -->
-      <section class="slide" data-notes="4:20–5:00\n展示产品结构：发现、执行、度量三层。\n强调我把信息架、动作架和结果架串在同一个 dashboard 里。\n这张图是全产品的骨架，后面用数据和流程证明。" data-title="产品骨架 · 4:20–5:00">
+      <!-- === SLIDE 10 · PRODUCT MAP === -->
+      <section class="slide" data-notes="4:50–5:25\n展示产品结构：发现、执行、度量三层。\n强调我把信息架、动作架和结果架串在同一个 dashboard 里。\n这张图是全产品的骨架，后面用雷达和建联流程证明。" data-title="产品骨架 · 4:50–5:25">
         <div class="paper-card map-card">
           <div class="eyebrow reveal">PRODUCT ARCHITECTURE</div>
           <h2 class="reveal" data-editable>发现 → 执行 → 度量</h2>
@@ -635,32 +655,11 @@
             <div class="flow-step reveal"><div class="num">03 · MEASURE</div><h3>看清结果</h3><p>回到看板，理解库存、互动率、管道与下一步。</p><span class="module">Dashboard · Monitoring</span></div>
           </div>
         </div>
-        <div class="page-mark">09 / 14</div>
-      </section>
-
-      <!-- === SLIDE 10 · PRODUCT EVIDENCE === -->
-      <section class="slide" data-notes="5:10–5:55\n这里展示当前 dashboard 的真实界面，直接看数据与分布。\n先指向看板顶部的信任声明，再指向三个关键指标：36,094 位达人、21,315.7M 累计粉丝、4.8% 平均互动率。\n这些数字来自租户当前库存，看板进一步呈现达人评级和平台分布，支持后续筛选与合作判断。" data-title="真实界面 · 5:10–5:55">
-        <div class="evidence-layout">
-          <div class="evidence-copy">
-            <div class="eyebrow reveal">PRODUCT EVIDENCE · LIVE DASHBOARD</div>
-            <h2 class="reveal" data-editable>让界面自己证明：<br><span class="serif-italic">这是一个可以被工作的系统。</span></h2>
-            <p class="body-md reveal" data-editable>我刻意把“可信数据”和“下一步动作”放在同一张看板里，避免产品沦为一组漂亮的数字。</p>
-            <div class="evidence-points">
-              <div class="evidence-point reveal"><i>✓</i><span>36,094 位真实达人库存</span></div>
-              <div class="evidence-point reveal"><i>✓</i><span>21,315.7M 累计 followers</span></div>
-              <div class="evidence-point reveal"><i>✓</i><span>4.8% 平均互动率 + 来源边界</span></div>
-            </div>
-          </div>
-          <div class="evidence-frame reveal">
-            <div class="evidence-shot"><img src="assets/oreach-dashboard-live.png?v=20260717-233734" alt="OutreachOS live marketing dashboard screenshot" /></div>
-            <div class="evidence-caption"><span>当前 live dashboard · 真实租户数据</span><span>OutreachOS</span></div>
-          </div>
-        </div>
         <div class="page-mark">10 / 14</div>
       </section>
 
       <!-- === SLIDE 11 · RADAR === -->
-      <section class="slide" data-notes="5:55–6:35\n讲赛道雷达：它把供给、热度和地域机会聚合出来，帮助用户快速判断方向。\n页面当前展示 36,094 条达人记录、22 个赛道、36 个国家和 3 个蓝海赛道；下方用印度尼西亚热点内容与库内可建联达人进行直接连接。\n这里体现产品判断：把“我该去哪儿”变成一个有数据依据、也能继续行动的选择。" data-title="赛道雷达 · 5:55–6:35">
+      <section class="slide" data-notes="5:25–6:05\n讲赛道雷达：它把供给、热度和地域机会聚合出来，帮助用户快速判断方向。\n页面当前展示 36,094 条达人记录、22 个赛道、36 个国家和 3 个蓝海赛道；下方用印度尼西亚热点内容与库内可建联达人进行直接连接。\n这里体现产品判断：把“我该去哪儿”变成一个有数据依据、也能继续行动的选择。" data-title="赛道雷达 · 5:25–6:05">
         <div class="radar-layout">
           <div class="radar-copy">
             <div class="eyebrow reveal">DISCOVER · RADAR</div>
@@ -677,8 +676,8 @@
         <div class="page-mark">11 / 14</div>
       </section>
 
-      <!-- === SLIDE 10 · LIVE OUTREACH WORKFLOW === -->
-      <section class="slide" data-notes="6:35–7:25\n这一页直接展示系统当前的建联开发页面。\n先指向顶部状态管道：19 条记录，包括 4 未建联、5 已建联、4 已回复、3 洽谈中、3 已成单。\n再指向表格：每个达人都有评级、平台、粉丝量、负责人、最近备注和状态；产品把从起草到合作的全过程放进一条可追踪的管道。\n最后强调一键建联仍然需要人确认，对外动作保持 human-in-loop。" data-title="真实建联工作流 · 6:35–7:25">
+      <!-- === SLIDE 12 · LIVE OUTREACH WORKFLOW === -->
+      <section class="slide" data-notes="6:05–6:55\n这一页直接展示系统当前的建联开发页面。\n先指向顶部状态管道：19 条记录，包括 4 未建联、5 已建联、4 已回复、3 洽谈中、3 已成单。\n再指向表格：每个达人都有评级、平台、粉丝量、负责人、最近备注和状态；产品把从起草到合作的全过程放进一条可追踪的管道。\n最后强调一键建联仍然需要人确认，对外动作保持 human-in-loop。" data-title="真实建联工作流 · 6:05–6:55">
         <div class="workflow-proof">
           <div>
             <div class="eyebrow reveal">LIVE PRODUCT · OUTREACH PIPELINE</div>
@@ -695,8 +694,8 @@
         <div class="page-mark">12 / 14</div>
       </section>
 
-      <!-- === SLIDE 11 · PRODUCT JUDGMENT === -->
-      <section class="slide" data-notes="7:25–8:10\n用产品判断收束产品介绍。\n我认为这个产品最重要的三件事：Trust（数据和权限透明）；Context（每一步保留上下文）；Control（AI 负责提效，人负责决策）。\n这三点也是我作为产品经理会持续守住的设计原则。" data-title="产品判断 · 7:25–8:10">
+      <!-- === SLIDE 13 · PRODUCT JUDGMENT === -->
+      <section class="slide" data-notes="6:55–7:40\n用产品判断收束产品介绍。\n我认为这个产品最重要的三件事：Trust（数据和权限透明）；Context（每一步保留上下文）；Control（AI 负责提效，人负责决策）。\n这三点也是我作为产品经理会持续守住的设计原则。" data-title="产品判断 · 6:55–7:40">
         <div class="paper-card judgment-card">
           <div class="eyebrow reveal">WHAT I WOULD PROTECT</div>
           <h2 class="reveal" data-editable>增长产品的核心，<br>是让每一次动作都<span class="serif-italic">更少失真。</span></h2>
@@ -710,8 +709,8 @@
         <div class="page-mark">13 / 14</div>
       </section>
 
-      <!-- === SLIDE 12 · OUTLOOK === -->
-      <section class="slide" data-notes="8:10–9:30（展望 + 预留追问）\n展望不要泛泛说“继续做 AI”。具体说三件事：\n1. 从数据可见到机会可解释：让用户知道为什么推荐这个赛道和这个人。\n2. 从草稿提效到结果闭环：把回复、合作、GMV/ROI 继续接回来。\n3. 从单点工具到增长操作系统：让小团队拥有一支可控的 AI 增长团队。\n最后用一句话结束：我希望做的是让每一次增长动作，都更接近真实用户和真实结果。" data-title="展望 · 8:10–9:30">
+      <!-- === SLIDE 14 · OUTLOOK === -->
+      <section class="slide" data-notes="7:40–9:30（展望 + 预留追问）\n具体说三件事：\n1. 从数据可见到机会可解释：让用户知道为什么推荐这个赛道和这个人。\n2. 从草稿提效到结果闭环：把回复、合作、GMV/ROI 继续接回来。\n3. 从单点工具到增长操作系统：让小团队拥有一支可控的 AI 增长团队。\n最后用一句话结束：我希望做的是让每一次增长动作，都更接近真实用户和真实结果。" data-title="展望 · 7:40–9:30">
         <div class="paper-card outlook-card">
           <div class="eyebrow reveal">03 · OUTLOOK</div>
           <h2 class="reveal" data-editable>下一步，<br>把增长做得更<span class="serif-italic">可解释、可控、可复用。</span></h2>
