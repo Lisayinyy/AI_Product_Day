@@ -359,21 +359,13 @@
     .evidence-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 16px; color: var(--muted); }
 
     /* === SLIDE 08 · RADAR === */
-    .radar-layout { position: absolute; left: 110px; right: 110px; top: 150px; display: grid; grid-template-columns: 1fr 1fr; gap: 70px; z-index: 2; }
+    .radar-layout { position: absolute; left: 110px; right: 110px; top: 146px; display: grid; grid-template-columns: .62fr 1.38fr; gap: 52px; align-items: start; z-index: 2; }
     .radar-copy h2 { margin-top: 28px; max-width: 700px; }
-    .radar-copy .body-md { margin-top: 26px; max-width: 680px; }
-    .radar-copy .quote { margin-top: 56px; padding-left: 26px; border-left: 5px solid var(--sage); font: italic 32px/1.25 var(--display); max-width: 600px; }
-    .opportunity { padding: 38px; min-height: 610px; }
-    .opportunity .title { font: 600 21px var(--body); letter-spacing: .1em; color: var(--muted); }
-    .opp-row { display: grid; grid-template-columns: 160px 1fr 130px; gap: 12px; align-items: center; padding: 23px 0; border-bottom: 1px solid var(--line); }
-    .opp-row:last-child { border-bottom: 0; }
-    .opp-name { font: 600 27px var(--body); }
-    .opp-bar { height: 18px; background: var(--paper-warm); border-radius: 99px; overflow: hidden; }
-    .opp-bar i { display: block; height: 100%; background: var(--terracotta); border-radius: 99px; }
-    .opp-row:nth-child(3) .opp-bar i { background: var(--sage); }
-    .opp-row:nth-child(4) .opp-bar i { background: var(--lavender); }
-    .opp-stat { text-align: right; font-size: 17px; color: var(--muted); }
-    .opp-badge { display: inline-block; margin-top: 18px; padding: 8px 12px; border-radius: 999px; background: #e6f3ea; color: #3d7656; font-size: 16px; }
+    .radar-copy .body-md { margin-top: 24px; max-width: 520px; }
+    .radar-copy .quote { margin-top: 42px; padding-left: 24px; border-left: 5px solid var(--sage); font: italic 30px/1.25 var(--display); max-width: 500px; }
+    .radar-frame { padding: 18px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 18px 46px rgba(43,36,29,.12); transform: rotate(.55deg); }
+    .radar-frame img { display: block; width: 100%; height: auto; background: #f3f6f4; }
+    .radar-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 16px; color: var(--muted); }
 
     /* === SLIDE 09 · AI TEAM === */
     .team-card { position: absolute; left: 120px; top: 128px; width: 1680px; height: 800px; padding: 72px 88px; }
@@ -666,22 +658,18 @@
       </section>
 
       <!-- === SLIDE 11 · RADAR === -->
-      <section class="slide" data-notes="5:55–6:35\n讲赛道雷达：它把供给、质量和地域机会聚合出来，帮助用户快速判断方向。\n数据：22 个赛道、36 个国家；例如 Food 4,978 位达人，平均 725.3K 粉，S/A 高评级 34%，覆盖 36 国。\n这里体现产品判断：把“我该去哪儿”变成一个可解释的选择。" data-title="赛道雷达 · 5:55–6:35">
+      <section class="slide" data-notes="5:55–6:35\n讲赛道雷达：它把供给、热度和地域机会聚合出来，帮助用户快速判断方向。\n页面当前展示 36,094 条达人记录、22 个赛道、36 个国家和 3 个蓝海赛道；下方用印度尼西亚热点内容与库内可建联达人进行直接连接。\n这里体现产品判断：把“我该去哪儿”变成一个有数据依据、也能继续行动的选择。" data-title="赛道雷达 · 5:55–6:35">
         <div class="radar-layout">
           <div class="radar-copy">
             <div class="eyebrow reveal">DISCOVER · RADAR</div>
             <h2 class="reveal" data-editable>先选对赛道，<br><span class="serif-italic">再选对人。</span></h2>
-            <p class="body-md reveal" data-editable>赛道雷达把品类供给、达人评级和地区分布放进一张机会矩阵，让“蓝海”不再只是感觉。</p>
+            <p class="body-md reveal" data-editable>赛道雷达把达人供给、内容热度和地区分布放进一张机会矩阵，让“蓝海”不再只是感觉。</p>
             <div class="quote reveal" data-editable>“蓝海” = 供给厚，而且头部没有垄断。</div>
-            <div class="timeline-tags reveal" style="margin-top:36px"><span>22 个赛道</span><span>36 个国家</span><span>真实库聚合</span></div>
+            <div class="timeline-tags reveal" style="margin-top:36px"><span>36,094 达人</span><span>22 个赛道</span><span>36 个国家</span></div>
           </div>
-          <div class="paper-card opportunity reveal">
-            <div class="title">OPPORTUNITY MATRIX</div>
-            <div class="opp-row"><div class="opp-name">Food</div><div class="opp-bar"><i style="width:86%"></i></div><div class="opp-stat">4,978 位<br>36 国</div></div>
-            <div class="opp-row"><div class="opp-name">Travel</div><div class="opp-bar"><i style="width:68%"></i></div><div class="opp-stat">1,675 位<br>905.6K 均粉</div></div>
-            <div class="opp-row"><div class="opp-name">Beauty</div><div class="opp-bar"><i style="width:74%"></i></div><div class="opp-stat">6,052 位<br>34 国</div></div>
-            <div class="opp-row"><div class="opp-name">Gaming</div><div class="opp-bar"><i style="width:52%"></i></div><div class="opp-stat">1,453 位<br>1.5M 均粉</div></div>
-            <div class="opp-badge">蓝海 · 供给厚 · 未垄断</div>
+          <div class="radar-frame reveal">
+            <img src="assets/oreach-radar-live.png?v=20260717-225859" alt="OutreachOS live track radar screenshot" />
+            <div class="radar-caption"><span>当前 live workspace · 赛道雷达 / 印度尼西亚热点</span><span>OutreachOS</span></div>
           </div>
         </div>
         <div class="page-mark">11 / 14</div>
