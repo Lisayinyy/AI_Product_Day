@@ -420,7 +420,7 @@
     .employees-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 16px; color: var(--muted); }
 
     /* === SLIDE 07 · CREATOR SIDE === */
-    .creator-role-layout { position: absolute; left: 110px; right: 110px; top: 118px; display: grid; grid-template-columns: 1.08fr .92fr; gap: 70px; align-items: center; z-index: 2; }
+    .creator-role-layout { position: absolute; left: 110px; right: 110px; top: 112px; display: grid; grid-template-columns: 1.06fr .94fr; gap: 58px; align-items: start; z-index: 2; }
     .creator-role-copy h2 { margin-top: 28px; max-width: 860px; }
     .creator-role-copy .body-md { margin-top: 24px; max-width: 780px; }
     .creator-role-points { display: grid; gap: 14px; margin-top: 40px; max-width: 780px; }
@@ -431,11 +431,15 @@
     .creator-role-point strong { display: block; font: 600 22px var(--body); }
     .creator-role-point span { display: block; margin-top: 5px; font-size: 18px; line-height: 1.3; color: var(--muted); }
     .creator-loop { margin-top: 28px; padding-left: 24px; border-left: 5px solid var(--terracotta); font: italic 25px/1.3 var(--display); color: var(--terracotta); }
-    .creator-role-frame { justify-self: center; width: 590px; padding: 16px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 18px 46px rgba(43,36,29,.12); transform: rotate(-.6deg); }
+    .creator-role-gallery { justify-self: center; width: 640px; display: grid; gap: 14px; }
+    .creator-role-frame { width: 100%; padding: 12px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 16px 38px rgba(43,36,29,.11); }
+    .creator-role-frame:first-child { transform: rotate(-.45deg); }
+    .creator-role-frame:last-child { transform: rotate(.45deg); }
     .creator-role-shot { position: relative; overflow: hidden; background: #fff; }
-    .creator-role-shot img { display: block; width: 100%; height: 740px; object-fit: contain; object-position: center; }
-    .creator-role-shot::after { content: "请选择你的身份"; position: absolute; left: 7.5%; top: 25.8%; width: 65%; height: 5.6%; display: flex; align-items: center; background: #fff; color: #74817b; font: 17px var(--body); }
-    .creator-role-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 16px; color: var(--muted); }
+    .creator-role-frame.selector .creator-role-shot img { display: block; width: 100%; height: 292px; object-fit: cover; object-position: center; }
+    .creator-role-frame.market .creator-role-shot img { display: block; width: 100%; height: 298px; object-fit: cover; object-position: center top; }
+    .creator-role-caption { display: flex; justify-content: space-between; gap: 12px; margin-top: 9px; font-size: 15px; color: var(--muted); }
+    .creator-role-caption span:last-child { color: var(--terracotta); font-weight: 600; }
 
     /* === SLIDE 10 · WORKFLOW === */
     .workflow-layout { position: absolute; left: 110px; right: 110px; top: 150px; z-index: 2; }
@@ -673,7 +677,7 @@
       </section>
 
       <!-- === SLIDE 08 · CREATOR SIDE === -->
-      <section class="slide" data-notes="3:50–4:10\n产品还有创作者一侧。素人或创作者可以免费入驻，领取带货活动，选择适合自己内容和受众的产品进行推荐。\n成交后按结果获得佣金并提现。\n这让商家与创作者在同一系统中形成闭环：商家发布、创作者接单、内容推荐、成交分佣。" data-title="创作者接单 · 3:50–4:10">
+      <section class="slide" data-notes="3:50–4:10\n产品还有创作者一侧。第一张真实页面展示用户选择达人 / 创作者身份；第二张展示注册后进入的 Creator Network 接单市场。\n素人或创作者可以免费入驻，浏览和筛选推广活动，选择适合自己内容和受众的产品进行推荐。\n成交后按结果获得佣金并提现。\n这让商家与创作者在同一系统中形成闭环：商家发布、创作者接单、内容推荐、成交分佣。" data-title="创作者接单 · 3:50–4:10">
         <div class="creator-role-layout">
           <div class="creator-role-copy">
             <div class="eyebrow reveal">TWO-SIDED WORKFLOW · CREATOR SIDE</div>
@@ -686,9 +690,15 @@
             </div>
             <div class="creator-loop reveal">商家发布 → 创作者接单 → 产品推荐 → 成交分佣</div>
           </div>
-          <div class="creator-role-frame reveal">
-            <div class="creator-role-shot"><img src="assets/oreach-role-selector-live.png?v=20260718-012410" alt="OutreachOS merchant and creator role selection screenshot" /></div>
-            <div class="creator-role-caption"><span>当前身份选择页 · 达人 / 创作者入口</span><span>OutreachOS</span></div>
+          <div class="creator-role-gallery">
+            <div class="creator-role-frame selector reveal">
+              <div class="creator-role-shot"><img src="assets/oreach-role-selector-crop.png?v=20260718-0816" alt="OutreachOS merchant and creator role selection screenshot" /></div>
+              <div class="creator-role-caption"><span>01 · 选择达人 / 创作者身份</span><span>ENTRY</span></div>
+            </div>
+            <div class="creator-role-frame market reveal">
+              <div class="creator-role-shot"><img src="assets/oreach-creator-market-live.png?v=20260718-0814" alt="OutreachOS Creator Network live gig marketplace screenshot" /></div>
+              <div class="creator-role-caption"><span>02 · 进入 Creator Network 接单市场</span><span>LIVE</span></div>
+            </div>
           </div>
         </div>
         <div class="page-mark">08 / 15</div>
