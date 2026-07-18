@@ -267,6 +267,9 @@
     .section-card h2 { margin-top: 74px; max-width: 970px; }
     .section-card .body-lg { margin-top: 34px; max-width: 900px; }
     .section-underline { width: 290px; height: 5px; background: var(--terracotta); margin-top: 52px; }
+    .section-platform-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 24px; padding: 11px 17px; border: 1px solid rgba(192,96,60,.42); background: rgba(255,253,248,.86); color: var(--terracotta); font: 600 19px var(--body); letter-spacing: .04em; text-decoration: none; transition: transform .2s ease, background .2s ease; }
+    .section-platform-link:hover { transform: translateY(-2px); background: #fff8f2; }
+    .section-platform-link span { font-size: 23px; line-height: 1; }
     .section-network { position: absolute; right: 84px; top: 150px; width: 520px; height: 590px; display: grid; grid-template-rows: 128px 244px 128px; gap: 28px; justify-items: center; align-items: center; }
     .section-network::before { content: ""; position: absolute; left: 50%; top: 92px; bottom: 92px; width: 2px; transform: translateX(-50%); background: linear-gradient(180deg, rgba(192,96,60,.2), rgba(192,96,60,.72) 48%, rgba(192,96,60,.2)); }
     .platform-node { position: relative; z-index: 2; width: 390px; min-height: 128px; padding: 23px 30px; background: rgba(255,253,248,.94); border: 1px solid var(--line); box-shadow: 0 12px 28px rgba(43,36,29,.06); text-align: center; }
@@ -580,12 +583,13 @@
       </section>
 
       <!-- === SLIDE 04 · PRODUCT SECTION === -->
-      <section class="slide" data-notes="2:05–2:20\n转场：下面进入产品部分。\n一句话定义：OutreachOS 是连接 OPC / 小团队与个人 Freelancer / 自由职业者的 AI Creator Growth Platform。\nOPC 和小团队在平台上发布需求、管理增长；个人 Freelancer 接单、推荐产品并按结果获得分佣；平台和数字员工协助双方完成匹配与执行。" data-title="产品 · 2:05–2:20">
+      <section class="slide" data-notes="2:05–2:20\n转场：下面进入产品部分。\n一句话定义：OutreachOS 是连接 OPC / 小团队与个人 Freelancer / 自由职业者的 AI Creator Growth Platform。\nOPC 和小团队在平台上发布需求、管理增长；个人 Freelancer 接单、推荐产品并按结果获得分佣；平台和数字员工协助双方完成匹配与执行。\n产品已部署，可现场通过 https://oreach.site/ 打开。" data-title="产品 · 2:05–2:20">
         <div class="paper-card section-card">
           <div class="section-num reveal">02 · PRODUCT</div>
           <h2 class="reveal" data-editable>把增长的两端，<br>连接成一个<span class="serif-italic">平台。</span></h2>
           <p class="body-lg reveal" data-editable>OutreachOS 连接 OPC / 小团队与个人 Freelancer / 自由职业者，让需求发布、创作者接单、协作执行和结果分佣在同一平台完成。</p>
           <div class="section-underline reveal"></div>
+          <a class="section-platform-link reveal" href="https://oreach.site/" target="_blank" rel="noopener noreferrer">oreach.site <span>↗</span></a>
           <div class="section-network reveal" aria-label="OutreachOS connects OPC and small teams with individual freelancers">
             <div class="platform-node opc"><span class="node-side">需求侧</span><strong>OPC / 小团队</strong><small>发布需求 · 管理增长</small></div>
             <div class="platform-hub"><span>PLATFORM</span><strong>OutreachOS</strong><small>匹配 · 协作 · 结算</small></div>
@@ -595,29 +599,8 @@
         <div class="page-mark">04 / 15</div>
       </section>
 
-      <!-- === SLIDE 05 · DIGITAL EMPLOYEES EVIDENCE === -->
-      <section class="slide" data-notes="2:20–2:45\n产品介绍先从数字员工开始：OutreachOS 把增长工作拆成可协作的岗位。\n这一页先展示数字员工的真实工作区：六个角色共享私有工作区和同一条达人管道。\n下一页先说明两类成熟平台分别覆盖什么，再回到六个数字员工的具体分工。" data-title="数字员工总览 · 2:20–2:45">
-        <div class="employees-layout">
-          <div class="employees-copy">
-            <div class="eyebrow reveal">EXECUTE · DIGITAL EMPLOYEES</div>
-            <h2 class="reveal" data-editable>一支<span class="serif-italic">有岗位分工的 AI 团队。</span><br>从数字员工开始协作。</h2>
-            <p class="body-md reveal" data-editable>数字员工各自负责一段增长工作，共享同一个私有工作区和同一条达人管道。</p>
-            <div class="employees-points">
-              <div class="employees-point reveal"><strong>Aria / Scout</strong><span>先分析赛道，再扩充真实达人池。</span></div>
-              <div class="employees-point reveal"><strong>Mia / Max / Leo</strong><span>从建联草稿到投放与跟进，动作可分工、可审核。</span></div>
-              <div class="employees-point reveal"><strong>Human-in-loop</strong><span>对外动作只产出待审草稿，批准后才发送。</span></div>
-            </div>
-          </div>
-          <div class="employees-frame reveal">
-            <img src="assets/oreach-employees-live.png?v=20260717-2255" alt="OutreachOS digital employees workspace screenshot" />
-            <div class="employees-caption"><span>当前 live workspace · 数字员工</span><span>OutreachOS</span></div>
-          </div>
-        </div>
-        <div class="page-mark">05 / 15</div>
-      </section>
-
-      <!-- === SLIDE 06 · COMPETITOR LANDSCAPE === -->
-      <section class="slide" data-notes="2:45–3:15\n这一页按两个市场、四类产品理解竞品。\n增长市场包括 Partnership / Creator Suite，以及品牌侧 workflow / 单平台 affiliate 闭环，代表是 impact.com、GRIN、Aspire、Upfluence、Modash 和 TikTok Shop Affiliate。\n人才与创作者市场包括通用 Freelancer Marketplace，以及 Creator / UGC Marketplace：Upwork、Fiverr、Contra、Freelancer.com 解决通用人才匹配、项目交付和支付；Collabstr、Insense、Billo 更聚焦创作者或 UGC 合作。\nOutreachOS 的产品判断是把两条链路连接起来：OPC / 小团队提出增长需求，数字员工协助拆解和执行，Freelancer / 创作者接单，结果和分佣回到同一条链路。\n注意：这是基于各平台官方产品重心的分类，不代表这些平台完全不具备另一侧能力，也不声称成熟平台不服务小团队。\n官方来源（访问 2026-07-18）：impact.com https://impact.com/ · TikTok Shop Affiliate https://business.tiktokshop.com/uk/affiliate · GRIN https://grin.co/creator-management/ · Aspire https://www.aspire.io/ · Upfluence https://www.upfluence.com/ · Modash https://www.modash.io/ · Upwork https://www.upwork.com/ · Fiverr https://www.fiverr.com/ · Contra https://contra.com/ · Freelancer.com https://www.freelancer.com/ · Collabstr https://collabstr.com/ · Insense https://insense.pro/ · Billo https://billo.app/" data-title="竞品格局 · 2:45–3:15">
+      <!-- === SLIDE 05 · COMPETITOR LANDSCAPE === -->
+      <section class="slide" data-notes="2:20–2:50\n这一页按两个市场、四类产品理解竞品。\n增长市场包括 Partnership / Creator Suite，以及品牌侧 workflow / 单平台 affiliate 闭环，代表是 impact.com、GRIN、Aspire、Upfluence、Modash 和 TikTok Shop Affiliate。\n人才与创作者市场包括通用 Freelancer Marketplace，以及 Creator / UGC Marketplace：Upwork、Fiverr、Contra、Freelancer.com 解决通用人才匹配、项目交付和支付；Collabstr、Insense、Billo 更聚焦创作者或 UGC 合作。\nOutreachOS 的产品判断是把两条链路连接起来：OPC / 小团队提出增长需求，数字员工协助拆解和执行，Freelancer / 创作者接单，结果和分佣回到同一条链路。\n注意：这是基于各平台官方产品重心的分类，不代表这些平台完全不具备另一侧能力，也不声称成熟平台不服务小团队。\n官方来源（访问 2026-07-18）：impact.com https://impact.com/ · TikTok Shop Affiliate https://business.tiktokshop.com/uk/affiliate · GRIN https://grin.co/creator-management/ · Aspire https://www.aspire.io/ · Upfluence https://www.upfluence.com/ · Modash https://www.modash.io/ · Upwork https://www.upwork.com/ · Fiverr https://www.fiverr.com/ · Contra https://contra.com/ · Freelancer.com https://www.freelancer.com/ · Collabstr https://collabstr.com/ · Insense https://insense.pro/ · Billo https://billo.app/" data-title="竞品格局 · 2:20–2:50">
         <div class="paper-card competitor-card">
           <div class="eyebrow reveal">COMPETITOR LANDSCAPE · TWO MARKETS</div>
           <h2 class="reveal" data-editable>两类市场，优化增长链路的<span class="serif-italic">不同环节。</span></h2>
@@ -645,6 +628,27 @@
             <p>OPC / 小团队发布增长需求 → 数字员工协作执行 → Freelancer / 创作者接单 → 结果与分佣回链</p>
           </div>
           <div class="competitor-source">Sources · 各平台官方产品页，访问 2026.07.18；分类反映产品核心重心。</div>
+        </div>
+        <div class="page-mark">05 / 15</div>
+      </section>
+
+      <!-- === SLIDE 06 · DIGITAL EMPLOYEES EVIDENCE === -->
+      <section class="slide" data-notes="2:50–3:15\n竞品页说明了市场中已有能力之后，再回到 OutreachOS 的具体产品解法。\nOutreachOS 把增长工作拆成六个可协作岗位，共享私有工作区和同一条达人管道。\n下一页逐个说明六个数字员工的职责与产出。" data-title="数字员工总览 · 2:50–3:15">
+        <div class="employees-layout">
+          <div class="employees-copy">
+            <div class="eyebrow reveal">EXECUTE · DIGITAL EMPLOYEES</div>
+            <h2 class="reveal" data-editable>一支<span class="serif-italic">有岗位分工的 AI 团队。</span><br>从数字员工开始协作。</h2>
+            <p class="body-md reveal" data-editable>数字员工各自负责一段增长工作，共享同一个私有工作区和同一条达人管道。</p>
+            <div class="employees-points">
+              <div class="employees-point reveal"><strong>Aria / Scout</strong><span>先分析赛道，再扩充真实达人池。</span></div>
+              <div class="employees-point reveal"><strong>Mia / Max / Leo</strong><span>从建联草稿到投放与跟进，动作可分工、可审核。</span></div>
+              <div class="employees-point reveal"><strong>Human-in-loop</strong><span>对外动作只产出待审草稿，批准后才发送。</span></div>
+            </div>
+          </div>
+          <div class="employees-frame reveal">
+            <img src="assets/oreach-employees-live.png?v=20260717-2255" alt="OutreachOS digital employees workspace screenshot" />
+            <div class="employees-caption"><span>当前 live workspace · 数字员工</span><span>OutreachOS</span></div>
+          </div>
         </div>
         <div class="page-mark">06 / 15</div>
       </section>
