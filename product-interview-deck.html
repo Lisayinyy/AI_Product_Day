@@ -406,6 +406,28 @@
     .agent .agent-output { display: inline-block; margin-top: 12px; padding: 5px 9px; border-radius: 999px; background: rgba(255,253,248,.88); border: 1px solid var(--line); font-size: 14px; color: var(--terracotta); }
     .human-loop { margin-top: 26px; display: flex; align-items: center; gap: 12px; font-size: 20px; color: var(--ink-soft); }
     .human-loop .lock { width: 31px; height: 31px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 15px; }
+
+    /* === SLIDE 08 · AGENT RUNTIME === */
+    .agent-runtime-card { position: absolute; left: 120px; top: 98px; width: 1680px; height: 884px; padding: 62px 76px; }
+    .agent-runtime-card h2 { margin-top: 20px; max-width: 1320px; font-size: 68px; }
+    .agent-runtime-card .body-md { margin-top: 14px; max-width: 1180px; }
+    .runtime-flow { display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr; align-items: stretch; margin-top: 34px; }
+    .runtime-node { min-width: 0; min-height: 188px; padding: 21px 20px 18px; background: var(--paper-warm); border: 1px solid var(--line); border-top: 6px solid var(--terracotta); }
+    .runtime-node:nth-child(3) { border-top-color: var(--sage); }
+    .runtime-node:nth-child(5) { border-top-color: var(--sky); }
+    .runtime-node:nth-child(7) { border-top-color: var(--lavender); }
+    .runtime-node:nth-child(9) { border-top-color: var(--pink); }
+    .runtime-node .runtime-num { font: 600 14px var(--body); letter-spacing: .13em; color: var(--muted); }
+    .runtime-node h3 { margin-top: 16px; font-size: 29px; }
+    .runtime-node p { margin-top: 10px; font-size: 17px; line-height: 1.35; color: var(--muted); }
+    .runtime-arrow { display: grid; place-items: center; font: 500 30px var(--display); color: var(--terracotta); }
+    .runtime-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
+    .runtime-principle { padding: 15px 18px; background: var(--ink); color: var(--paper); }
+    .runtime-principle b { display: block; font: 600 14px var(--body); letter-spacing: .13em; color: #d99a7e; }
+    .runtime-principle span { display: block; margin-top: 6px; font-size: 17px; line-height: 1.3; color: rgba(255,253,248,.8); }
+    .runtime-roster { margin-top: 18px; display: flex; align-items: center; gap: 14px; font-size: 17px; color: var(--muted); }
+    .runtime-roster strong { color: var(--ink-soft); }
+    .runtime-roster i { width: 36px; height: 2px; background: var(--terracotta); }
     .employees-layout { position: absolute; left: 110px; right: 110px; top: 146px; display: grid; grid-template-columns: .76fr 1.24fr; gap: 58px; align-items: start; z-index: 2; }
     .employees-copy h2 { margin-top: 28px; max-width: 700px; }
     .employees-copy .body-md { margin-top: 24px; max-width: 630px; }
@@ -497,7 +519,7 @@
     .ui-hint { padding: 8px 12px; border: 1px solid rgba(26,26,26,.16); border-radius: 999px; background: rgba(255,253,248,.62); backdrop-filter: blur(8px); }
     .progress { display: flex; align-items: center; gap: 14px; }
     .progress-line { width: 170px; height: 2px; background: rgba(26,26,26,.18); overflow: hidden; }
-    .progress-line i { display: block; width: 8.33%; height: 100%; background: var(--terracotta-soft); transition: width .4s var(--ease); }
+    .progress-line i { display: block; width: 6.25%; height: 100%; background: var(--terracotta-soft); transition: width .4s var(--ease); }
     .edit-hotzone { position: fixed; top: 0; left: 0; width: 90px; height: 90px; z-index: 10000; }
     .edit-toggle { position: fixed; top: 18px; left: 18px; z-index: 10001; opacity: 0; pointer-events: none; border: 0; background: var(--terracotta); color: #fff; padding: 10px 13px; border-radius: 999px; cursor: pointer; font: 600 13px var(--body); transition: opacity .3s ease; }
     .edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
@@ -524,7 +546,7 @@
           <div class="title-orbit reveal"><span class="title-orbit-label">AI PM · builds her own tools</span></div>
           <div class="title-meta" data-editable>AI PRODUCT MANAGER · 2026</div>
         </div>
-        <div class="page-mark">01 / 15</div>
+        <div class="page-mark">01 / 16</div>
       </section>
 
       <!-- === SLIDE 02 · WHO I AM === -->
@@ -565,7 +587,7 @@
             </div>
           </div>
         </div>
-        <div class="page-mark">02 / 15</div>
+        <div class="page-mark">02 / 16</div>
       </section>
 
       <!-- === SLIDE 03 · VIBE CODING PORTFOLIO === -->
@@ -583,7 +605,7 @@
           </div>
           <div class="work-handoff reveal" data-editable>下一个问题：如果把这些能力串起来，能不能让一个小团队跑完增长闭环？</div>
         </div>
-        <div class="page-mark">03 / 15</div>
+        <div class="page-mark">03 / 16</div>
       </section>
 
       <!-- === SLIDE 04 · PRODUCT SECTION === -->
@@ -600,7 +622,7 @@
             <div class="platform-node freelancer"><span class="node-side">创作者侧</span><strong>Freelancer / 自由职业者</strong><small>领取活动 · 推荐产品</small></div>
           </div>
         </div>
-        <div class="page-mark">04 / 15</div>
+        <div class="page-mark">04 / 16</div>
       </section>
 
       <!-- === SLIDE 05 · COMPETITOR LANDSCAPE === -->
@@ -633,7 +655,7 @@
           </div>
           <div class="competitor-source">Sources · 各平台官方产品页，访问 2026.07.18；分类反映产品核心重心。</div>
         </div>
-        <div class="page-mark">05 / 15</div>
+        <div class="page-mark">05 / 16</div>
       </section>
 
       <!-- === SLIDE 06 · DIGITAL EMPLOYEES EVIDENCE === -->
@@ -654,7 +676,7 @@
             <div class="employees-caption"><span>当前 live workspace · 数字员工</span><span>OutreachOS</span></div>
           </div>
         </div>
-        <div class="page-mark">06 / 15</div>
+        <div class="page-mark">06 / 16</div>
       </section>
 
       <!-- === SLIDE 07 · DIGITAL EMPLOYEE ROLES === -->
@@ -673,11 +695,38 @@
           </div>
           <div class="human-loop reveal"><span class="lock">✓</span><span>Human-in-loop：对外内容先生成待审草稿，人工确认后再发送。</span></div>
         </div>
-        <div class="page-mark">07 / 15</div>
+        <div class="page-mark">07 / 16</div>
       </section>
 
-      <!-- === SLIDE 08 · CREATOR SIDE === -->
-      <section class="slide" data-notes="3:50–4:10\n产品还有创作者一侧。第一张真实页面展示用户选择达人 / 创作者身份；第二张展示注册后进入的 Creator Network 接单市场。\n素人或创作者可以免费入驻，浏览和筛选推广活动，选择适合自己内容和受众的产品进行推荐。\n成交后按结果获得佣金并提现。\n这让商家与创作者在同一系统中形成闭环：商家发布、创作者接单、内容推荐、成交分佣。" data-title="创作者接单 · 3:50–4:10">
+      <!-- === SLIDE 08 · AGENT RUNTIME === -->
+      <section class="slide" data-notes="3:50–4:20\n如果继续深挖，这六个数字员工本质上是六个垂直、受控的工作流 Agent，共用一套自研的轻量 Agent Runtime。\n每个 Agent 都有岗位目标、System Prompt、任务 Schema 和权限边界。手动派活或 Cron 触发后，编排层根据员工和任务类型读取真实业务数据、调用限定工具，再让 MiniMax 完成语义分析或内容生成。\n代码和 SQL 负责事实、计算与副作用，LLM 负责语义推理和生成；模型不可用时进入规则降级。\n任务结果统一写入 agent_tasks。涉及发信、私信等对外动作时，状态进入 awaiting_approval，经人工批准并在建联工作台二次确认后才真正发送。\n当前没有引入 LangGraph 或 CrewAI，因为现阶段工作流边界清晰，轻量编排更容易审计和控制；工具和分支继续增加后，可以升级成可持久化的状态图。" data-title="Agent 底层框架 · 3:50–4:20">
+        <div class="paper-card agent-runtime-card">
+          <div class="eyebrow reveal">UNDER THE HOOD · CONTROLLED AGENTS</div>
+          <h2 class="reveal" data-editable>六个数字员工，运行在同一套<br><span class="serif-italic">受控 Agent 框架</span>里。</h2>
+          <p class="body-md reveal" data-editable>角色目标、真实工具、模型推理、任务状态与人工审批，共同构成一个可执行的垂直 Agent。</p>
+          <div class="runtime-flow">
+            <div class="runtime-node reveal"><div class="runtime-num">01 · TRIGGER</div><h3>触发</h3><p>用户手动派活<br>或 Cron 定时托管</p></div>
+            <div class="runtime-arrow reveal">→</div>
+            <div class="runtime-node reveal"><div class="runtime-num">02 · IDENTITY</div><h3>角色</h3><p>岗位目标、System Prompt<br>任务 Schema 与权限</p></div>
+            <div class="runtime-arrow reveal">→</div>
+            <div class="runtime-node reveal"><div class="runtime-num">03 · TOOLS</div><h3>工具</h3><p>达人库、热点、CRM<br>Campaign 与邮件</p></div>
+            <div class="runtime-arrow reveal">→</div>
+            <div class="runtime-node reveal"><div class="runtime-num">04 · REASONING</div><h3>推理</h3><p>MiniMax 分析与生成<br>模型失败时规则降级</p></div>
+            <div class="runtime-arrow reveal">→</div>
+            <div class="runtime-node reveal"><div class="runtime-num">05 · GOVERNANCE</div><h3>治理</h3><p>任务落库、人工审批<br>结果可追溯</p></div>
+          </div>
+          <div class="runtime-principles">
+            <div class="runtime-principle reveal"><b>CODE / SQL</b><span>保证真实数据、确定性计算与可控执行</span></div>
+            <div class="runtime-principle reveal"><b>LLM</b><span>负责语义理解、判断、总结与内容生成</span></div>
+            <div class="runtime-principle reveal"><b>HUMAN</b><span>掌握对外发送、付款与承诺的最终决策权</span></div>
+          </div>
+          <div class="runtime-roster reveal"><i></i><strong>Shared Runtime</strong><span>Aria · Scout · Mia · Max · Leo · Rin</span></div>
+        </div>
+        <div class="page-mark">08 / 16</div>
+      </section>
+
+      <!-- === SLIDE 09 · CREATOR SIDE === -->
+      <section class="slide" data-notes="4:20–4:40\n产品还有创作者一侧。第一张真实页面展示用户选择达人 / 创作者身份；第二张展示注册后进入的 Creator Network 接单市场。\n素人或创作者可以免费入驻，浏览和筛选推广活动，选择适合自己内容和受众的产品进行推荐。\n成交后按结果获得佣金并提现。\n这让商家与创作者在同一系统中形成闭环：商家发布、创作者接单、内容推荐、成交分佣。" data-title="创作者接单 · 4:20–4:40">
         <div class="creator-role-layout">
           <div class="creator-role-copy">
             <div class="eyebrow reveal">TWO-SIDED WORKFLOW · CREATOR SIDE</div>
@@ -701,11 +750,11 @@
             </div>
           </div>
         </div>
-        <div class="page-mark">08 / 15</div>
+        <div class="page-mark">09 / 16</div>
       </section>
 
-      <!-- === SLIDE 09 · WHY NOW === -->
-      <section class="slide" data-notes="4:10–4:35\n这一页回答“为什么值得做”。\n先讲外部需求：TikTok Shop 交易和直播供给快速增长，Creator 广告预算进入规模化阶段。\n再讲产品证据：OutreachOS 当前公开快照已经覆盖 36K+ 达人记录、40 个市场。\n注意口径：1.7 亿是 TikTok 美国用户；37B 是 IAB 对美国 2025 年 Creator 广告支出的预测；$20B+ 是 eMarketer 公开新闻稿对美国 TikTok Shop 2026 年销售额的保守公开口径；36K+ 和 40 个市场是产品公开快照，不是 TAM。\n结论：交易增长 × 预算增长 × 执行缺口，构成产品窗口。\n来源：TikTok Newsroom https://newsroom.tiktok.com/en-us/year-on-tiktok-2024 · IAB https://www.iab.com/insights/2025-creator-economy-ad-spend-strategy-report/ · IAB PDF https://www.iab.com/wp-content/uploads/2025/11/IAB_Creator_Ad_Spend_and_Strategy_Report_2025.pdf · eMarketer https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025 · OutreachOS https://oreach.site/" data-title="为什么现在值得做 · 4:10–4:35">
+      <!-- === SLIDE 10 · WHY NOW === -->
+      <section class="slide" data-notes="4:40–5:05\n这一页回答“为什么值得做”。\n先讲外部需求：TikTok Shop 交易和直播供给快速增长，Creator 广告预算进入规模化阶段。\n再讲产品证据：OutreachOS 当前公开快照已经覆盖 36K+ 达人记录、40 个市场。\n注意口径：1.7 亿是 TikTok 美国用户；37B 是 IAB 对美国 2025 年 Creator 广告支出的预测；$20B+ 是 eMarketer 公开新闻稿对美国 TikTok Shop 2026 年销售额的保守公开口径；36K+ 和 40 个市场是产品公开快照，不是 TAM。\n结论：交易增长 × 预算增长 × 执行缺口，构成产品窗口。\n来源：TikTok Newsroom https://newsroom.tiktok.com/en-us/year-on-tiktok-2024 · IAB https://www.iab.com/insights/2025-creator-economy-ad-spend-strategy-report/ · IAB PDF https://www.iab.com/wp-content/uploads/2025/11/IAB_Creator_Ad_Spend_and_Strategy_Report_2025.pdf · eMarketer https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025 · OutreachOS https://oreach.site/" data-title="为什么现在值得做 · 4:40–5:05">
         <div class="paper-card why-card">
           <div class="eyebrow reveal">WHY NOW · MARKET SIGNALS</div>
           <h2 class="reveal" data-editable>交易在增长，<br><span class="serif-italic">执行缺口也在增长。</span></h2>
@@ -718,11 +767,11 @@
           </div>
           <div class="why-conclusion reveal" data-editable>交易增长 × 预算增长 × 执行缺口 = 产品窗口</div>
         </div>
-        <div class="page-mark">09 / 15</div>
+        <div class="page-mark">10 / 16</div>
       </section>
 
-      <!-- === SLIDE 10 · PROBLEM === -->
-      <section class="slide" data-notes="4:35–5:10\n先讲用户，再讲功能。\n目标用户是 OPC 和小团队：他们有达人营销的意愿，当前需要一套可信、可执行、可复盘的工作流。\n三个痛点：市场和品类机会不透明；达人数据真假难辨且分散；建联与跟进靠表格和人肉。" data-title="用户与问题 · 4:35–5:10">
+      <!-- === SLIDE 11 · PROBLEM === -->
+      <section class="slide" data-notes="5:05–5:40\n先讲用户，再讲功能。\n目标用户是 OPC 和小团队：他们有达人营销的意愿，当前需要一套可信、可执行、可复盘的工作流。\n三个痛点：市场和品类机会不透明；达人数据真假难辨且分散；建联与跟进靠表格和人肉。" data-title="用户与问题 · 5:05–5:40">
         <div class="problem-layout">
           <div class="eyebrow reveal">THE USER PROBLEM</div>
           <h2 class="reveal" data-editable>小团队想增长，<br><span class="serif-italic">但每一步都在失真。</span></h2>
@@ -734,11 +783,11 @@
           </div>
           <div class="problem-foot reveal">所以产品的第一原则是：让每个动作都有上下文。</div>
         </div>
-        <div class="page-mark">10 / 15</div>
+        <div class="page-mark">11 / 16</div>
       </section>
 
-      <!-- === SLIDE 11 · PRODUCT MAP === -->
-      <section class="slide" data-notes="5:10–5:45\n展示产品结构：发现、执行、度量三层。\n强调我把信息架、动作架和结果架串在同一个 dashboard 里。\n这张图是全产品的骨架，后面用雷达和建联流程证明。" data-title="产品骨架 · 5:10–5:45">
+      <!-- === SLIDE 12 · PRODUCT MAP === -->
+      <section class="slide" data-notes="5:40–6:15\n展示产品结构：发现、执行、度量三层。\n强调我把信息架、动作架和结果架串在同一个 dashboard 里。\n这张图是全产品的骨架，后面用雷达和建联流程证明。" data-title="产品骨架 · 5:40–6:15">
         <div class="paper-card map-card">
           <div class="eyebrow reveal">PRODUCT ARCHITECTURE</div>
           <h2 class="reveal" data-editable>发现 → 执行 → 度量</h2>
@@ -749,11 +798,11 @@
             <div class="flow-step reveal"><div class="num">03 · MEASURE</div><h3>看清结果</h3><p>回到看板，理解库存、互动率、管道与下一步。</p><span class="module">Dashboard · Monitoring</span></div>
           </div>
         </div>
-        <div class="page-mark">11 / 15</div>
+        <div class="page-mark">12 / 16</div>
       </section>
 
-      <!-- === SLIDE 12 · RADAR === -->
-      <section class="slide" data-notes="5:45–6:25\n讲赛道雷达：它把供给、热度和地域机会聚合出来，帮助用户快速判断方向。\n页面当前展示 36,094 条达人记录、22 个赛道、36 个国家和 3 个蓝海赛道；下方用印度尼西亚热点内容与库内可建联达人进行直接连接。\n这里体现产品判断：把“我该去哪儿”变成一个有数据依据、也能继续行动的选择。" data-title="赛道雷达 · 5:45–6:25">
+      <!-- === SLIDE 13 · RADAR === -->
+      <section class="slide" data-notes="6:15–6:55\n讲赛道雷达：它把供给、热度和地域机会聚合出来，帮助用户快速判断方向。\n页面当前展示 36,094 条达人记录、22 个赛道、36 个国家和 3 个蓝海赛道；下方用印度尼西亚热点内容与库内可建联达人进行直接连接。\n这里体现产品判断：把“我该去哪儿”变成一个有数据依据、也能继续行动的选择。" data-title="赛道雷达 · 6:15–6:55">
         <div class="radar-layout">
           <div class="radar-copy">
             <div class="eyebrow reveal">DISCOVER · RADAR</div>
@@ -767,11 +816,11 @@
             <div class="radar-caption"><span>当前 live workspace · 赛道雷达 / 印度尼西亚热点</span><span>OutreachOS</span></div>
           </div>
         </div>
-        <div class="page-mark">12 / 15</div>
+        <div class="page-mark">13 / 16</div>
       </section>
 
-      <!-- === SLIDE 13 · LIVE OUTREACH WORKFLOW === -->
-      <section class="slide" data-notes="6:25–7:15\n这一页直接展示系统当前的建联开发页面。\n先指向顶部状态管道：19 条记录，包括 4 未建联、5 已建联、4 已回复、3 洽谈中、3 已成单。\n再指向表格：每个达人都有评级、平台、粉丝量、负责人、最近备注和状态；产品把从起草到合作的全过程放进一条可追踪的管道。\n最后强调一键建联仍然需要人确认，对外动作保持 human-in-loop。" data-title="真实建联工作流 · 6:25–7:15">
+      <!-- === SLIDE 14 · LIVE OUTREACH WORKFLOW === -->
+      <section class="slide" data-notes="6:55–7:45\n这一页直接展示系统当前的建联开发页面。\n先指向顶部状态管道：19 条记录，包括 4 未建联、5 已建联、4 已回复、3 洽谈中、3 已成单。\n再指向表格：每个达人都有评级、平台、粉丝量、负责人、最近备注和状态；产品把从起草到合作的全过程放进一条可追踪的管道。\n最后强调一键建联仍然需要人确认，对外动作保持 human-in-loop。" data-title="真实建联工作流 · 6:55–7:45">
         <div class="workflow-proof">
           <div>
             <div class="eyebrow reveal">LIVE PRODUCT · OUTREACH PIPELINE</div>
@@ -785,11 +834,11 @@
           </div>
           <div class="proof-outreach-frame reveal"><img src="assets/oreach-outreach-live.png" alt="OutreachOS live outreach pipeline screenshot" /><div class="proof-outreach-caption">当前 live workspace · 建联开发 / 达人沟通管道</div></div>
         </div>
-        <div class="page-mark">13 / 15</div>
+        <div class="page-mark">14 / 16</div>
       </section>
 
-      <!-- === SLIDE 14 · PRODUCT JUDGMENT === -->
-      <section class="slide" data-notes="7:15–8:00\n用产品判断收束产品介绍。\n我认为这个产品最重要的三件事：Trust（数据和权限透明）；Context（每一步保留上下文）；Control（AI 负责提效，人负责决策）。\n这三点也是我作为产品经理会持续守住的设计原则。" data-title="产品判断 · 7:15–8:00">
+      <!-- === SLIDE 15 · PRODUCT JUDGMENT === -->
+      <section class="slide" data-notes="7:45–8:30\n用产品判断收束产品介绍。\n我认为这个产品最重要的三件事：Trust（数据和权限透明）；Context（每一步保留上下文）；Control（AI 负责提效，人负责决策）。\n这三点也是我作为产品经理会持续守住的设计原则。" data-title="产品判断 · 7:45–8:30">
         <div class="paper-card judgment-card">
           <div class="eyebrow reveal">WHAT I WOULD PROTECT</div>
           <h2 class="reveal" data-editable>增长产品的核心，<br>是让每一次动作都<span class="serif-italic">更少失真。</span></h2>
@@ -800,11 +849,11 @@
           </div>
           <div class="judgment-foot reveal">→ 这也是我对“AI 产品经理”四个字的理解</div>
         </div>
-        <div class="page-mark">14 / 15</div>
+        <div class="page-mark">15 / 16</div>
       </section>
 
-      <!-- === SLIDE 15 · OUTLOOK === -->
-      <section class="slide" data-notes="8:00–9:30（AI 产品感悟 + 结尾）\n做完 OutreachOS，我对 AI 产品有了三个更具体的判断。\n第一，可解释，用户才敢用。AI 给出的推荐需要同时展示来源、依据和不确定性。\n第二，可控制，用户才敢把任务交给它。越接近对外发送、付款和承诺，越需要人工确认、权限边界和审计记录。\n第三，有真实反馈，产品才会越用越好。要把用户选择、回复、合作和结果接回系统，持续评估模型与工作流。\n我现在更关注 AI 进入真实工作流之后，能否帮助用户更快、更稳地完成一件事。\n最后结束：我希望继续做让 AI 能力真正进入用户工作和结果的产品。" data-title="AI 产品感悟 · 8:00–9:30">
+      <!-- === SLIDE 16 · OUTLOOK === -->
+      <section class="slide" data-notes="8:30–9:55（AI 产品感悟 + 结尾）\n做完 OutreachOS，我对 AI 产品有了三个更具体的判断。\n第一，可解释，用户才敢用。AI 给出的推荐需要同时展示来源、依据和不确定性。\n第二，可控制，用户才敢把任务交给它。越接近对外发送、付款和承诺，越需要人工确认、权限边界和审计记录。\n第三，有真实反馈，产品才会越用越好。要把用户选择、回复、合作和结果接回系统，持续评估模型与工作流。\n我现在更关注 AI 进入真实工作流之后，能否帮助用户更快、更稳地完成一件事。\n最后结束：我希望继续做让 AI 能力真正进入用户工作和结果的产品。" data-title="AI 产品感悟 · 8:30–9:55">
         <div class="paper-card outlook-card">
           <div class="eyebrow reveal">03 · AI PRODUCT REFLECTION</div>
           <h2 class="reveal" data-editable>AI 产品的价值，<br>发生在模型走进<span class="serif-italic">真实工作流</span>之后。</h2>
@@ -817,7 +866,7 @@
           <div class="outlook-close reveal" data-editable>Thank you · Let’s build.</div>
           <div class="outlook-meta">LISA YIN · AI PRODUCT MANAGER / VIBE CODER</div>
         </div>
-        <div class="page-mark">15 / 15</div>
+        <div class="page-mark">16 / 16</div>
       </section>
     </main>
   </div>
@@ -825,7 +874,7 @@
   <!-- === PRESENTATION UI === -->
   <div class="ui-bar">
     <div class="ui-hint">← → / Space · N 讲稿 · E 编辑</div>
-    <div class="progress"><span id="counter">01 / 12</span><span class="progress-line"><i id="progressLine"></i></span></div>
+    <div class="progress"><span id="counter">01 / 16</span><span class="progress-line"><i id="progressLine"></i></span></div>
   </div>
   <div class="edit-hotzone" id="editHotzone" aria-hidden="true"></div>
   <button class="edit-toggle" id="editToggle" title="Edit mode (E)">✎ 编辑</button>
