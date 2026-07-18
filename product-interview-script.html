@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lisa Yin · OutreachOS 产品开放日 10 分钟演讲稿" />
+  <title>Lisa Yin · OutreachOS 10分钟演讲稿</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #fffdf8;
+      --warm: #f3eee6;
+      --canvas: #f8f6f1;
+      --ink: #1a1a1a;
+      --soft: #4a453f;
+      --muted: #766f66;
+      --line: #ded5c8;
+      --accent: #c0603c;
+      --sage: #9bc8b1;
+      --lavender: #c7b8ea;
+      --display: "Fraunces", Georgia, serif;
+      --body: "DM Sans", "PingFang SC", sans-serif;
+      --script-size: 21px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        repeating-linear-gradient(90deg, rgba(122,82,48,.055) 0, rgba(122,82,48,.055) 1px, transparent 1px, transparent 46px),
+        var(--canvas);
+      font-family: var(--body);
+    }
+    button, a { font: inherit; }
+    button { cursor: pointer; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto auto;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,253,248,.92);
+      backdrop-filter: blur(14px);
+    }
+    .brand { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .brand strong { font: 600 20px var(--display); white-space: nowrap; }
+    .brand span { overflow: hidden; color: var(--muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+    .timer { display: flex; align-items: center; gap: 12px; }
+    .timer-display { min-width: 90px; font: 600 25px/1 var(--display); letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+    .timer-display.over { color: #a4362b; }
+    .controls { display: flex; align-items: center; gap: 7px; }
+    .control {
+      min-height: 34px;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--soft);
+      background: var(--paper);
+      font-size: 13px;
+    }
+    .control:hover, .control:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+    .control.primary { border-color: var(--accent); color: #fff; background: var(--accent); }
+    .progress-track { position: fixed; inset: 0 0 auto; z-index: 30; height: 3px; background: transparent; }
+    .progress-bar { width: 0; height: 100%; background: var(--accent); transition: width .15s linear; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 830px);
+      justify-content: center;
+      gap: 58px;
+      padding: 44px 30px 100px;
+    }
+    .timeline {
+      position: sticky;
+      top: 86px;
+      align-self: start;
+      max-height: calc(100vh - 110px);
+      overflow: auto;
+      padding: 8px 0 24px;
+    }
+    .timeline-title { margin-bottom: 14px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+    .timeline a {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 9px;
+      padding: 8px 10px;
+      border-left: 2px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+    .timeline a span:first-child { font-variant-numeric: tabular-nums; }
+    .timeline a:hover, .timeline a.active { border-left-color: var(--accent); color: var(--ink); background: rgba(255,253,248,.72); }
+
+    main { min-width: 0; }
+    .cover {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 24px;
+      padding: 52px 56px 46px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 22px 60px rgba(43,36,29,.1);
+    }
+    .cover::after { content: ""; position: absolute; inset: 0 0 0 auto; width: 12px; background: linear-gradient(var(--sage), var(--lavender), #f4b8c5, #a8d8ea); }
+    .cover h1 { max-width: 650px; margin: 0; font: 600 54px/1.03 var(--display); letter-spacing: -.045em; }
+    .cover h1 em { color: var(--accent); font-weight: 500; }
+    .cover p { max-width: 610px; margin: 22px 0 0; color: var(--muted); font-size: 17px; line-height: 1.55; }
+    .cover-meta { display: flex; flex-wrap: wrap; gap: 9px 22px; margin-top: 30px; color: var(--soft); font-size: 13px; }
+    .cover-meta b { color: var(--accent); }
+
+    .script-section {
+      scroll-margin-top: 90px;
+      margin-top: 18px;
+      padding: 34px 42px 36px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 12px 32px rgba(43,36,29,.055);
+    }
+    .section-head { display: grid; grid-template-columns: 58px 1fr auto; gap: 16px; align-items: baseline; margin-bottom: 22px; }
+    .section-num { color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: .13em; }
+    .section-head h2 { margin: 0; font: 600 31px/1.12 var(--display); letter-spacing: -.025em; }
+    .section-time { padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+    .script-section p { margin: 0 0 15px; color: var(--soft); font-size: var(--script-size); line-height: 1.72; letter-spacing: .005em; }
+    .script-section p:last-child { margin-bottom: 0; }
+    .script-section strong { color: var(--ink); font-weight: 600; }
+    .script-section .closing { padding-left: 18px; border-left: 4px solid var(--accent); color: var(--ink); font-family: var(--display); font-size: calc(var(--script-size) + 2px); }
+
+    .footer-note { margin: 28px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+
+    @media (max-width: 920px) {
+      .topbar { grid-template-columns: 1fr auto; gap: 10px; padding: 12px 14px; }
+      .brand span { display: none; }
+      .timer { justify-self: end; }
+      .controls { grid-column: 1 / -1; overflow-x: auto; padding-bottom: 2px; }
+      .control { flex: 0 0 auto; }
+      .layout { display: block; padding: 16px 12px 80px; }
+      .timeline { position: sticky; top: 112px; z-index: 10; display: flex; gap: 5px; max-height: none; margin: 0 -12px 14px; padding: 9px 12px; overflow-x: auto; border-bottom: 1px solid var(--line); background: rgba(248,246,241,.94); backdrop-filter: blur(10px); }
+      .timeline-title { display: none; }
+      .timeline a { display: block; min-width: 38px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); text-align: center; }
+      .timeline a span:last-child { display: none; }
+      .timeline a.active { border-color: var(--accent); color: #fff; background: var(--accent); }
+      .cover { padding: 38px 28px 34px; }
+      .cover h1 { font-size: 42px; }
+      .script-section { padding: 27px 24px 30px; }
+      .section-head { grid-template-columns: 44px 1fr; gap: 8px 10px; }
+      .section-head h2 { font-size: 27px; }
+      .section-time { grid-column: 2; justify-self: start; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .topbar, .timeline, .progress-track { display: none !important; }
+      .layout { display: block; max-width: 850px; margin: 0 auto; padding: 0; }
+      .cover, .script-section { break-inside: avoid; box-shadow: none; }
+      .script-section { padding: 24px 30px; }
+      .script-section p { font-size: 16px; line-height: 1.55; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+  <header class="topbar">
+    <div class="brand"><strong>Lisa Yin</strong><span>OutreachOS · 10 分钟产品分享</span></div>
+    <div class="timer"><span class="timer-display" id="timerDisplay">00:00</span><button class="control primary" id="timerToggle">开始计时</button></div>
+    <div class="controls">
+      <button class="control" id="timerReset">重置</button>
+      <button class="control" id="fontDown" aria-label="减小字号">A−</button>
+      <button class="control" id="fontUp" aria-label="增大字号">A＋</button>
+      <button class="control" onclick="window.print()">打印 / PDF</button>
+      <a class="control" href="product-interview-deck.html" target="_blank">打开 PPT ↗</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="timeline" aria-label="演讲章节">
+      <div class="timeline-title">16 SLIDES · 09:55</div>
+      <a href="#s01"><span>01</span><span>开场</span></a>
+      <a href="#s02"><span>02</span><span>我是谁</span></a>
+      <a href="#s03"><span>03</span><span>Vibe Coding</span></a>
+      <a href="#s04"><span>04</span><span>产品介绍</span></a>
+      <a href="#s05"><span>05</span><span>竞品格局</span></a>
+      <a href="#s06"><span>06</span><span>数字员工</span></a>
+      <a href="#s07"><span>07</span><span>六个角色</span></a>
+      <a href="#s08"><span>08</span><span>Agent 框架</span></a>
+      <a href="#s09"><span>09</span><span>创作者接单</span></a>
+      <a href="#s10"><span>10</span><span>为什么现在</span></a>
+      <a href="#s11"><span>11</span><span>用户痛点</span></a>
+      <a href="#s12"><span>12</span><span>产品骨架</span></a>
+      <a href="#s13"><span>13</span><span>赛道雷达</span></a>
+      <a href="#s14"><span>14</span><span>建联工作流</span></a>
+      <a href="#s15"><span>15</span><span>产品判断</span></a>
+      <a href="#s16"><span>16</span><span>AI 产品感悟</span></a>
+    </nav>
+
+    <main>
+      <section class="cover">
+        <h1>OutreachOS<br><em>10 分钟演讲稿</em></h1>
+        <p>闭门产品面试 / 产品开放日版本。按当前 16 页演示顺序整理，可直接照读，也可作为提词器配合 PPT 使用。</p>
+        <div class="cover-meta"><span><b>总时长</b> 09:55</span><span><b>结构</b> 自我介绍 2′ · 产品 6′ · 感悟 2′</span><span><b>演讲人</b> Lisa Yin / 尹媛媛</span></div>
+      </section>
+
+      <section class="script-section" id="s01"><div class="section-head"><span class="section-num">01</span><h2>开场</h2><span class="section-time">0:00–0:25</span></div><p>大家好，我是 Lisa Yin，尹媛媛。</p><p>我做产品时有一个习惯：尽量把一个想法真正推进到可使用的产品、真实的数据和完整的用户体验。</p><p>今天我会先简单介绍我是谁，然后分享我最近从零开始做的 AI 产品 OutreachOS，以及在这个过程中形成的一些 AI 产品思考。</p></section>
+
+      <section class="script-section" id="s02"><div class="section-head"><span class="section-num">02</span><h2>我是谁</h2><span class="section-time">0:25–1:35</span></div><p>我的背景可以概括成三个关键词：<strong>Data、Design 和 Code</strong>。</p><p>我在密歇根大学学习计算机科学，接触了数据分析、机器学习和 Human-Computer Interaction。之后在 AI4ALL，我带领过十周的 AI 教学项目，也参与过 BERT 相关研究。这段经历让我开始关注：怎样把复杂的 AI 能力转化成普通人能理解和使用的产品。</p><p>在真格基金和德勤的经历，训练了我的市场研究、商业分析和 AI Agent 方向的判断能力。在 MiniMax，我进一步参与了增长系统从零到一的建设。</p><p>现在，我也在香港大学 Artificial Intelligence 项目继续深化 AI 能力。</p><p>这些经历最后汇聚成我现在的产品工作方式：我可以同时理解数据、用户体验和技术实现，并把它们推进成一个完整产品。</p></section>
+
+      <section class="script-section" id="s03"><div class="section-head"><span class="section-num">03</span><h2>Vibe Coding 项目</h2><span class="section-time">1:35–2:05</span></div><p>我对产品有一个很直接的理解：<strong>好产品等于解决痛点问题</strong>。</p><p>我做的每个 Vibe Coding 项目，基本都来自自己当时遇到的问题。</p><p>比如 PromptAI 解决提示词管理，Skills Master 解决技能学习，Sentiment Monitor 解决舆情监测，Influencer System 解决达人管理，Token Hit 解决模型用量观察。</p><p>我会先成为产品的第一个用户，再从实际使用中继续迭代。后来我开始思考：能不能把这些分散的能力串成一条完整的增长工作流？这就是 OutreachOS 的起点。</p></section>
+
+      <section class="script-section" id="s04"><div class="section-head"><span class="section-num">04</span><h2>产品介绍</h2><span class="section-time">2:05–2:20</span></div><p>OutreachOS 是一个 <strong>AI Creator Growth Platform</strong>。</p><p>它连接 OPC、小团队与个人 Freelancer、自由职业者。小团队可以发布增长需求、管理合作；创作者可以接单、推荐产品并根据结果获得分佣。</p><p>产品已经部署，点击页面上的 <strong>oreach.site/login</strong> 就可以直接进入登录页。</p></section>
+
+      <section class="script-section" id="s05"><div class="section-head"><span class="section-num">05</span><h2>竞品格局</h2><span class="section-time">2:20–2:50</span></div><p>我把市场中的竞品分成两条链路。</p><p>第一类是品牌增长平台，例如 impact.com、GRIN、Aspire、Upfluence 和 Modash，核心能力集中在达人管理、建联、合作和效果追踪。</p><p>第二类是 Freelancer 与 Creator Marketplace，例如 Upwork、Fiverr、Collabstr 和 Insense，核心能力集中在供需撮合、接单、交付与支付。</p><p>OutreachOS 希望连接这两条链路：小团队提出增长需求，数字员工协助执行，Freelancer 和创作者承接任务，最终结果与分佣回到同一个平台。</p></section>
+
+      <section class="script-section" id="s06"><div class="section-head"><span class="section-num">06</span><h2>数字员工总览</h2><span class="section-time">2:50–3:15</span></div><p>针对小团队执行人力有限的问题，我把增长工作拆成了六个数字员工。</p><p>它们共享同一个私有工作区、达人库和合作管道。</p><p>Aria 和 Scout 负责发现机会、扩充达人池；Mia、Max 和 Leo 负责建联、投放与跟进；Rin 负责效果归因和复盘。</p><p>所有涉及对外沟通的动作都会先生成草稿，由用户确认后再执行。</p></section>
+
+      <section class="script-section" id="s07"><div class="section-head"><span class="section-num">07</span><h2>六个角色</h2><span class="section-time">3:15–3:50</span></div><p>具体来看：</p><p><strong>Aria</strong> 是赛道分析员，帮助用户判断应该进入哪个市场和品类。<strong>Scout</strong> 是达人搜寻员，根据市场、品类和关键词发现新的真实达人。</p><p><strong>Mia</strong> 是建联专员，结合达人信息和当地语言生成个性化建联草稿。<strong>Max</strong> 是投放操盘手，把一句需求拆成达人组合、预算、创意和排期。</p><p><strong>Leo</strong> 是跟进专员，识别长期未回复或卡在洽谈阶段的达人。<strong>Rin</strong> 是效果分析师，根据 GMV、ROI 和合作结果给出下一轮建议。</p><p>六个角色共同覆盖从机会发现到结果复盘的增长链路。</p></section>
+
+      <section class="script-section" id="s08"><div class="section-head"><span class="section-num">08</span><h2>Agent 底层框架</h2><span class="section-time">3:50–4:20</span></div><p>如果从技术框架继续深挖，这六个数字员工本质上是六个垂直、受控的工作流 Agent，共享一套自研的轻量 Agent Runtime。</p><p>每个 Agent 都有明确的岗位目标、System Prompt、任务 Schema 和权限边界。</p><p>代码和 SQL 负责真实数据、确定性计算和具体执行；LLM 负责语义理解、判断和内容生成；任务结果会统一落库并保留状态。</p><p>模型暂时不可用时，系统会进入规则降级。涉及发送、付款和承诺的关键动作，最终决策权始终保留给用户。</p></section>
+
+      <section class="script-section" id="s09"><div class="section-head"><span class="section-num">09</span><h2>创作者接单</h2><span class="section-time">4:20–4:40</span></div><p>平台同时提供创作者一侧。</p><p>个人 Freelancer、达人甚至素人创作者，都可以免费入驻，浏览平台上的推广活动，选择适合自己内容和受众的产品。</p><p>完成推荐并产生实际成交后，创作者可以获得佣金。</p><p>这样就形成了一个双边闭环：小团队发布需求，创作者接单，平台协助执行，最终根据结果完成分佣。</p></section>
+
+      <section class="script-section" id="s10"><div class="section-head"><span class="section-num">10</span><h2>为什么现在值得做</h2><span class="section-time">4:40–5:05</span></div><p>这个方向值得做，背后有三个市场信号。</p><p>TikTok 在美国已经拥有超过 <strong>1.7 亿用户</strong>，Shop LIVE 的内容供给快速增长。</p><p>IAB 预计美国 Creator 广告支出达到 <strong>370 亿美元</strong>。eMarketer 对美国 TikTok Shop 2026 年销售额的公开预测已经超过 <strong>200 亿美元</strong>。</p><p>同时，OutreachOS 当前的公开产品快照已经覆盖超过 <strong>3.6 万条达人记录和 40 个市场</strong>。</p><p>交易、预算和内容供给都在增长，小团队的执行压力也会同步增加。</p></section>
+
+      <section class="script-section" id="s11"><div class="section-head"><span class="section-num">11</span><h2>用户痛点</h2><span class="section-time">5:05–5:40</span></div><p>我聚焦的核心用户是 OPC 和小团队。</p><p>他们通常会遇到三个问题。</p><p>第一，<strong>看不见机会</strong>。很难判断哪个市场、哪个品类还有增长空间。</p><p>第二，<strong>信不过数据</strong>。达人粉丝、互动率和数据来源分散，筛选成本很高。</p><p>第三，<strong>行动难闭环</strong>。建联、跟进、合作和归因经常散落在不同表格和工具中。</p><p>所以我给产品确定的原则是：让每一个增长动作都保留完整上下文。</p></section>
+
+      <section class="script-section" id="s12"><div class="section-head"><span class="section-num">12</span><h2>产品骨架</h2><span class="section-time">5:40–6:15</span></div><p>整个产品由三层组成。</p><p>第一层是<strong>发现</strong>：通过赛道雷达和达人库判断机会。</p><p>第二层是<strong>执行</strong>：通过数字员工完成选人、建联、投放和跟进。</p><p>第三层是<strong>度量</strong>：把合作结果、GMV 和 ROI 接回系统。</p><p>这三层分别回答：应该去哪里、下一步做什么、最终有没有产生结果。</p></section>
+
+      <section class="script-section" id="s13"><div class="section-head"><span class="section-num">13</span><h2>赛道雷达</h2><span class="section-time">6:15–6:55</span></div><p>这是当前真实的赛道雷达页面。</p><p>页面展示了 36,094 条达人记录、22 个赛道和 36 个国家。</p><p>用户可以先查看每个品类的达人供给、高评级达人占比和地区分布，再下钻到具体市场的热点内容和可建联达人。</p><p>这一页体现了我对 AI 产品“可解释”的理解。</p><p>系统给出推荐时，也要展示数据来源和推荐依据，让用户知道为什么应该选择这个市场、这个品类和这个达人。</p></section>
+
+      <section class="script-section" id="s14"><div class="section-head"><span class="section-num">14</span><h2>建联工作流</h2><span class="section-time">6:55–7:45</span></div><p>这是系统当前的建联开发页面。</p><p>顶部是一条完整的合作状态管道。目前展示了 19 条记录，包括未建联、已建联、已回复、洽谈中和已成单。</p><p>下方每个达人都有评级、平台、粉丝量、负责人、最近记录和当前状态。</p><p>AI 可以生成建联或跟进草稿，但发送前需要用户确认。发送之后，回复和合作状态会继续留在系统中。</p><p>这样，用户看到的是一条可以持续追踪的增长工作流。</p></section>
+
+      <section class="script-section" id="s15"><div class="section-head"><span class="section-num">15</span><h2>产品判断</h2><span class="section-time">7:45–8:30</span></div><p>在做这个产品的过程中，我形成了三个产品判断。</p><p>第一是 <strong>Trust</strong>。数据来源、模型状态和权限边界需要透明。</p><p>第二是 <strong>Context</strong>。每一步都要保留之前的用户选择、达人信息和合作状态。</p><p>第三是 <strong>Control</strong>。AI 可以提高执行效率，关键决策仍然需要用户掌握。</p><p>这三个原则决定了用户是否愿意把真实工作交给 AI。</p></section>
+
+      <section class="script-section" id="s16"><div class="section-head"><span class="section-num">16</span><h2>AI 产品感悟</h2><span class="section-time">8:30–9:55</span></div><p>做完 OutreachOS，我对 AI 产品有了三个更具体的判断。</p><p>第一，<strong>可解释，用户才敢用</strong>。AI 给出的推荐，需要同时展示来源、依据和不确定性。</p><p>第二，<strong>可控制，用户才敢把任务交给它</strong>。越接近发送、付款和承诺，越需要人工确认、权限边界和操作记录。</p><p>第三，<strong>有反馈，产品才会越用越好</strong>。用户的选择、达人回复、合作结果和 GMV，需要重新回到系统中，形成持续评估和学习。</p><p>所以我现在判断一个 AI 产品的价值，会重点看它进入真实工作流之后，能不能帮助用户更快、更稳地完成一件事。</p><p class="closing">未来我希望继续做这样的产品：让 AI 能力真正进入用户的工作，也真正连接到用户的结果。<br><br>谢谢大家。</p></section>
+
+      <p class="footer-note">键盘提示：浏览器中使用 Cmd/Ctrl + P 可保存为 PDF。</p>
+    </main>
+  </div>
+
+  <script>
+    const display = document.getElementById('timerDisplay');
+    const toggle = document.getElementById('timerToggle');
+    const reset = document.getElementById('timerReset');
+    let running = false;
+    let startedAt = 0;
+    let elapsed = 0;
+    let raf = 0;
+
+    const paintTimer = () => {
+      const current = elapsed + (running ? Date.now() - startedAt : 0);
+      const totalSeconds = Math.floor(current / 1000);
+      const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      display.textContent = `${minutes}:${seconds}`;
+      display.classList.toggle('over', totalSeconds > 595);
+      if (running) raf = requestAnimationFrame(paintTimer);
+    };
+
+    toggle.addEventListener('click', () => {
+      if (running) {
+        elapsed += Date.now() - startedAt;
+        running = false;
+        cancelAnimationFrame(raf);
+        toggle.textContent = '继续计时';
+      } else {
+        startedAt = Date.now();
+        running = true;
+        toggle.textContent = '暂停';
+        paintTimer();
+      }
+    });
+    reset.addEventListener('click', () => {
+      running = false;
+      elapsed = 0;
+      cancelAnimationFrame(raf);
+      toggle.textContent = '开始计时';
+      paintTimer();
+    });
+
+    let fontSize = 21;
+    const setFont = value => {
+      fontSize = Math.max(17, Math.min(30, value));
+      document.documentElement.style.setProperty('--script-size', `${fontSize}px`);
+      localStorage.setItem('lisa-script-font-size', String(fontSize));
+    };
+    setFont(Number(localStorage.getItem('lisa-script-font-size')) || 21);
+    document.getElementById('fontDown').addEventListener('click', () => setFont(fontSize - 1));
+    document.getElementById('fontUp').addEventListener('click', () => setFont(fontSize + 1));
+
+    const sections = [...document.querySelectorAll('.script-section')];
+    const links = [...document.querySelectorAll('.timeline a')];
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      links.forEach(link => link.classList.toggle('active', link.hash === `#${visible.target.id}`));
+    }, { rootMargin: '-20% 0px -65%', threshold: [0, .2, .6] });
+    sections.forEach(section => observer.observe(section));
+
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      const ratio = max > 0 ? scrollY / max : 0;
+      document.getElementById('progressBar').style.width = `${Math.min(100, ratio * 100)}%`;
+    };
+    addEventListener('scroll', updateProgress, { passive: true });
+    addEventListener('resize', updateProgress);
+    updateProgress();
+  </script>
+</body>
+</html>
